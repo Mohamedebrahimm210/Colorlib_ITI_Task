@@ -1,0 +1,885 @@
+/* Start Variables */
+:root {
+    --main-color: #d82a4e;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s ease;
+}
+/* End Variables */
+/* Start Global Rules */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* 
+======================================================================================================================================
+                                                    Start Header
+======================================================================================================================================
+*/
+.header {
+    padding: 30px;
+    background-image: url(../Images/bg.jpg.webp);
+    background-size: cover;
+}
+
+.header .first-part {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header .list li {
+    display: inline-block;
+    padding-left: 50px;
+}
+
+.header .first-part i{
+    display: none;
+}
+
+@media (max-width:992px) {
+    .header .list li{
+        padding-left: 20px;
+    }
+}
+@media (max-width: 767px){
+    .header .btn{
+        display: none;
+    }
+    .header .first-part{
+        justify-content: space-between;
+    }
+    .header .first-part i{
+        display: inline-block;
+        color: white;
+        font-size: 25px;
+    }
+    .header .first-part .list{
+        left: 0;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 60px;
+        left: auto;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0.7; 
+    }
+    .header .first-part i:hover + .list{
+        visibility: visible;
+    }
+    .header .first-part .list li{
+        /* text-align: center; */
+        margin: 20px 0 0 10px;
+    }
+    
+    header nav ul{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 60px;
+    left: auto;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0.6;
+  }
+}
+
+.header .list li a {
+    text-decoration: none;
+    color: white;
+    transition: var(--main-duration);
+}
+
+.header .list li a:hover {
+    color: var(--main-color);
+    
+}
+
+.header .btn {
+    background-color: var(--main-color);
+    padding: 15px 60px;
+    margin-left: 30px;
+}
+
+.header .btn a {
+    color: white;
+    text-decoration: none;
+}
+.header .btn:hover{
+    transform: scale(1.1);
+}
+
+.btn,
+.btn2 {
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    transition: var(--main-duration);
+}
+.header .btn2:hover{
+    transform: scale(1.1);
+}
+
+/* ---------------------- */
+.txt {
+    margin-top: 180px;
+}
+
+.txt h1,
+.txt p {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.txt h1 {
+    font-size: 50px;
+}
+@media (max-width: 767px){
+    .txt h1 {
+    font-size: 35px;
+}
+}
+
+.txt p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/* ---------------------- */
+.form1 {
+    margin: 50px auto 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form1 input {
+    margin: 15px;
+    padding: 15px;
+    width: 36%;
+    border-radius: 10px;
+    border: none;
+    transition: var(--main-duration);
+}
+.form1 input:hover{
+    transform: scale(1.1);
+}
+
+.form1 .btn2 {
+    background-color: var(--main-color);
+    border: none;
+    margin-left: 15px;
+    padding: 15px 40px;
+}
+
+.form1 .btn2 {
+    color: white;
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+    border-color: white;
+}
+
+@media (max-width:768px){
+    .form1{
+        /* display: flex; */
+        flex-wrap: wrap;
+    }
+    .form1 input{
+        display: inline-block;
+        width: 100%;
+    }
+}
+/* 
+======================================================================================================================================
+                                            Start Second Section (Categories)
+======================================================================================================================================
+*/
+.txt2 {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.txt2 h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #474747;
+    margin-bottom: 50px;
+}
+
+.txt2 p {
+    text-align: center;
+    color: #878787;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+@media (max-width:992px) {
+    .txt2 h2 {
+        font-size: 30px;
+    }
+    .txt2 p{
+        font-size: 18px;
+    }
+}
+@media (max-width:768px){
+    .txt2 h2 {
+        font-size: 20px;
+    }
+    .txt2 p{
+        font-size: 13px;
+    }
+}
+/* 
+======================================================================================================================================
+                                            Start Third Section (Courses)
+======================================================================================================================================
+*/
+.courses {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.courses .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.courses .container div {
+    color: #878787;
+    width: calc(94% / 3);
+    margin-bottom: 30px;
+    background-color: #edf4f6;
+    transition: var(--main-duration);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.courses .container div :nth-child(4) {
+    color: var(--main-color);
+    padding-bottom: 20px;
+}
+
+.courses .container div h4 {
+    color: #474747;
+}
+
+.courses .container div h4,
+.courses .container div p {
+    margin-top: 15px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.courses .container div:hover {
+    background-color: var(--main-color);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.courses .container div:hover :where(p, h4) {
+    color: white;
+}
+
+.courses .container div img {
+    width: 100%;
+}
+
+@media (max-width:992px) {
+    .courses .container div{
+    width: calc(94% / 2);
+    }
+}
+@media (max-width: 767px){
+    .courses .container{
+        justify-content: center;
+    }
+    .courses .container div{
+    width: 90%;
+    }
+}
+/* 
+======================================================================================================================================
+                                        Start Fourth Section (Search Course)
+======================================================================================================================================
+*/
+.search .container {
+    padding: 50px 100px;
+    background-color: var(--main-color);
+}
+
+.search .container h2 {
+    font-weight: 100;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.search .container .form2 {
+    background-color: white;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.search .container input {
+    width: calc(65% / 2);
+    background-color: #eee;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    transition: var(--main-duration);
+}
+.search .container input:hover{
+    transform: scale(1.1);
+}
+
+.search .container .btn2 {
+    background-color: var(--main-color);
+    border: none;
+    padding: 15px;
+    width: 25%;
+}
+.search .container .btn2:hover{
+    transform: scale(1.1);
+}
+
+.search .container .form2 input:focus {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.form2 .btn2 a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width:992px) {
+    .search .container .form2{
+        flex-wrap: wrap;
+    }
+    .search .container input {
+        width: 90%;
+    }
+    .search .container .btn2{
+        width: 50%;
+    }
+}
+/* 
+======================================================================================================================================
+                                        Start Fifth Section (Featured Courses)
+======================================================================================================================================
+*/
+.txt2 ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.txt2 ul li {
+    display: inline-block;
+}
+
+.txt2 ul li a {
+    text-decoration: none;
+    color: #474747;
+    background-color: white;
+    transition: var(--main-duration);
+}
+.txt2 ul li a:hover{
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+/* 
+======================================================================================================================================
+                                        Start Sixth Section (Products)
+======================================================================================================================================
+*/
+.products .container div p {
+    font-size: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.products {
+    margin: 50px 0;
+}
+
+.products .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.products .container>div {
+    color: #878787;
+    width: calc(94% / 4);
+    margin-bottom: 30px;
+    background-color: #edf4f6;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: var(--main-duration);
+}
+.products .container>div:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.products .container>div .price {
+    position: absolute;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px;
+    left: 10px;
+    top: 10px;
+    font-size: 11px;
+}
+
+.products .container div>img {
+    width: 100%;
+}
+
+.products .container div .info {
+    width: 100%;
+    padding: 0 30px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.products .container div .info h4 {
+    color: #474747;
+    margin: 30px 0 10px;
+}
+
+.products .container div .info p {
+    margin: 0 0 20px;
+    font-size: 11px;
+}
+
+.products .container div .info span {
+    color: var(--main-color);
+}
+
+.products .container div .developer {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.products .container div .developer img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.products .container div .developer p {
+    margin: 0;
+    font-size: 11px;
+}
+
+.products .container div .developer p span {
+    color: var(--main-color);
+}
+
+@media (max-width:992px) {
+    .products .container>div {
+        width: calc(94% / 2);
+    }
+}
+@media (max-width: 767px){
+    .products .container {
+        justify-content: center;
+    }
+    .products .container>div {
+        width: 80%;
+    }
+}
+/*
+======================================================================================================================================
+                                        Start Seventh Section (Sign-up)
+======================================================================================================================================
+*/
+.teacher {
+    background-color: var(--main-color);
+    width: 50%;
+    padding: 120px;
+}
+
+.teacher h2 {
+    color: white;
+    font-size: 48px;
+}
+
+.teacher p {
+    color: white;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+.teacher .form3 {
+    background-color: white;
+    padding: 50px;
+    margin-top: 60px;
+    border-radius: 10px;
+}
+
+.teacher .form3 input {
+    padding: 20px;
+    outline: none;
+    width: 100%;
+    margin: 10px 0;
+    background-color: #eee;
+    border: none;
+    border-radius: 10px;
+    transition: var(--main-duration);
+}
+.teacher .form3 input:hover{
+    transform: scale(1.1);
+}
+
+.teacher .form3 input:last-of-type {
+    display: none;
+}
+
+.teacher .form3 label {
+    display: block;
+    width: fit-content;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 44px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: var(--main-duration);
+}
+
+.teacher .form3 button {
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-color);
+    display: block;
+    width: fit-content;
+    padding: 20px 44px;
+    margin-top: 16px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    transition: var(--main-duration);
+}
+.teacher label:hover,
+.teacher .form3 button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.final {
+    display: flex;
+}
+
+.final .image {
+    width: 50%;
+    background-image: url("../Images/signup-bg.jpg.webp");
+    background-size: cover;
+}
+@media (max-width:992px){
+    .teacher h2{
+        font-size: 35px;
+    }
+    .teacher .form3 label,
+    .teacher .form3 button{
+        width: 40%;
+    }
+    .teacher {
+    width: 100%;
+    padding: 100px;
+    }
+    .final .image {
+        display: none;
+    }
+}
+@media (max-width: 767px){
+    .teacher h2{
+        font-size: 30px;
+    }
+    .teacher .form3 label,
+    .teacher .form3 button{
+        width: 70%;
+    }
+    .teacher {
+    padding: 80px;
+    }
+}
+/* 
+======================================================================================================================================
+                                        Start Eighth Section (Join Community)
+======================================================================================================================================
+*/
+.txt2 button {
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-color);
+    display: block;
+    width: fit-content;
+    padding: 20px 55px;
+    margin: 40px auto;
+    border-radius: 10px;
+    border: none;
+    transition: var(--main-duration);
+}
+.txt2 button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.bord {
+    border-bottom: 3px solid var(--main-color);
+    padding-bottom: 40px;
+}
+@media (max-width:992px) {
+    .products .container>div {
+        width: calc(94% / 2);
+    }
+}
+@media (max-width: 767px){
+    .products .container {
+        justify-content: center;
+    }
+    .products .container>div {
+        width: 80%;
+    }
+}
+/* 
+======================================================================================================================================
+                                        Start Ninth Section (Contact-Info)
+======================================================================================================================================
+*/
+.contact .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact .container div {
+    width: calc(90% / 5);
+}
+
+.contact .container div h3 {
+    color: #474747;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-weight: 150;
+}
+
+.contact .container div ul {
+    color: #878787;
+}
+
+.contact .container .one ul li {
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+.contact .container  ul {
+    color: #878787;
+    list-style: none;
+    padding: 0;
+}
+
+.contact .container .two ul li,
+.contact .container .three ul li,
+.contact .container .four ul li,
+.contact .container .five ul li {
+    padding-bottom: 11px;
+    font-size: 13px;
+}
+
+.contact .container .two ul li a,
+.contact .container .three ul li a,
+.contact .container .four ul li a {
+    color: #878787;
+    text-decoration: none;
+}
+.contact .container ul li a:hover {
+    color: var(--main-color);
+}
+
+.contact .container .five div input {
+    background-color: #eee;
+    border: none;
+    padding: 15px 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: var(--main-duration);
+}
+
+.contact .container .five h3 {
+    margin-bottom: 20px;
+}
+
+.contact .container .five button {
+    background-color: var(--main-color);
+    padding: 15px 25px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    transition: var(--main-duration);
+    border: none;
+}
+.contact .container .five div input:hover,
+.contact .container .five button:hover{
+    transform: scale(1.1);
+} 
+.contact .container .five button:hover{
+    cursor: pointer;
+}
+
+.contact .container .five ul li {
+    display: inline-block;
+    margin-top: 10px;
+    width: 150px;
+}
+@media (max-width:992px) {
+    .contact .container div {
+        width: calc(80% / 2);
+    }
+    .contact .container div h3 {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 767px){
+    .contact .container{
+        justify-content: center;
+    }
+     .contact .container>div {
+        padding-left: 40px;
+        width: 51%;
+    }
+    .contact .container div h3 {
+        margin-top: 40px;
+    }
+}
+/* 
+======================================================================================================================================
+                                        Start Tenth Section (Footer)
+======================================================================================================================================
+*/
+.footer {
+    background-color: #edf4f6;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    position: relative;
+}
+
+.footer p {
+    margin: 10px;
+}
+.footer li {
+    list-style: none;
+    display: inline;
+    position: relative;
+}
+.footer li:first-child a::after{
+    position: absolute;
+    content: "|";
+    right: 4px;
+    top: 3px;
+}
+.footer li:nth-child(2) a::after{
+    position: absolute;
+    content: "|";
+    right: 4px;
+    top: 3px;
+}
+
+.footer li:not(li:last-child) {
+    padding-right: 15px;
+}
+
+.footer .container ul li a {
+    text-decoration: none;
+    color: #474747;
+    font-size: 12px;
+}
+.footer .container span{
+    color: var(--main-color);
+}
+
+@media (max-width:992px) {
+    .footer li {
+        list-style: none;
+        display: block;
+    }
+    .footer li:first-child a::after{
+        display: none;
+    }
+    .footer li:nth-child(2) a::after{
+        display: none;
+    }
+}
