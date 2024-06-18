@@ -720,6 +720,7 @@ input:focus {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .contact .container div {
@@ -728,7 +729,7 @@ input:focus {
 
 .contact .container div h3 {
     color: #474747;
-    margin-top: 80px;
+    margin-top: 30px;
     margin-bottom: 40px;
     font-weight: 150;
 }
